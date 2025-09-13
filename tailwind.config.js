@@ -1,11 +1,8 @@
 module.exports = {
-  content: ["./src/*.html"],
+  darkMode: 'class',
+  content: ["./src/*.html",'./src/*.{ts,js}'],
   theme: {
-    extend: {
-      colors: {
-        'daily-dev-tips': "#F89283"
-      }
-    },
+    extend: {},
   },
   variants: {
     extend: {},
