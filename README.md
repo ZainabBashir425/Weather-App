@@ -27,8 +27,4 @@ And your website will start up.
 npm install -g live-server
 ```
 
-## Modifying the project
-
-You can then modify the `tailwind.config.js` for your own custom colors if needed
-And modify the `index.html` inside the `src` directory.
 

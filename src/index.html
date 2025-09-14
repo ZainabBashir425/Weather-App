@@ -1,14 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Basic HTML/Tailwind starter</title>
-    <meta name="description" content="Basic HTML/Tailwind starter" />
-    <meta name="author" content="Daily Dev Tips" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
-  <body>
-    <div class="w-screen h-screen bg-daily-dev-tips flex items-center justify-center text-white">Welcome to initial Starter kit by Areesh</div>
+  <body
+    id="bodyBg"
+    class="bg-cover bg-center min-h-screen flex items-center justify-center"
+  >
+    <div
+      id="weather-container"
+      class="bg-black/10 w-[400px] p-5 my-3 rounded-2xl shadow-lg backdrop-blur-md border text-center relative h-[200px]"
+    >
+      <h2 class="text-2xl mb-2">Weather App</h2>
+      <!-- after <h2 class="text-white text-2xl mb-2">Weather App</h2> -->
+      <div class="flex justify-between items-center mb-3">
+        <!-- Theme toggle -->
+        <button
+          id="themeToggle"
+          class="text-sm px-2 py-1 border rounded-lg"
+        >
+          Toggle Theme
+        </button>
+        <!-- Temp unit toggle -->
+        <button
+          id="unitToggle"
+          class="text-sm px-2 py-1 border rounded-lg"
+        >
+          °C / °F
+        </button>
+      </div>
+
+      <!-- Search -->
+      <div class="relative flex items-center mt-4 h-[55px]">
+        <i
+          class="fa-solid fa-location-dot absolute left-3 text-lg"
+        ></i>
+        <input
+          id="city"
+          type="text"
+          placeholder="Enter your location"
+          class="w-full h-full pl-10 pr-10 bg-transparent border rounded-lg  text-lg capitalize outline-none"
+        />
+        <button
+          id="searchBtn"
+          class="absolute right-2  text-xl cursor-pointer"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="not-found text-center mt-4 "></div>
+
+      <img
+        id="weather-icon"
+        alt="Weather Icon"
+        class="hidden w-[200px] h-[200px] mx-auto my-2"
+      />
+
+      <div id="temp-div" class=" text-6xl mt-[-30px]"></div>
+
+      <div id="weather-info" class=" text-lg capitalize"></div>
+
+      <div
+        class="weather-details flex justify-between mt-5 px-3"
+      ></div>
+
+      <div
+        id="hourly-forecast"
+        class="flex overflow-x-auto whitespace-nowrap mt-5 pb-5 space-x-4"
+      ></div>
+      <div
+        id="daily-forecast"
+        class="flex overflow-x-auto whitespace-nowrap mt-5 pb-5 space-x-4"
+      ></div>
+    </div>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
