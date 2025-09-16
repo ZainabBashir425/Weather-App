@@ -134,16 +134,16 @@ function displayWeather(data) {
         weatherInfoDiv.innerHTML = `<p>${cityName}</p><p>${description}</p><p>Feels Like ${feelLike}${unitSymbol}</p>`;
         weatherDetailsDiv.innerHTML = `
       <div class="flex items-center space-x-2">
-        <i class="fa-solid fa-water text-2xl"></i>
+        <i class="fa-solid fa-water sm:text-2xl text-lg"></i>
         <div>
-          <span class="text-xl font-semibold">${humidity}%</span>
+          <span class="sm:text-xl text-base font-semibold">${humidity}%</span>
           <p class="text-sm">Humidity</p>
         </div>
       </div>
       <div class="flex items-center space-x-2">
-        <i class="fa-solid fa-wind text-2xl"></i>
+        <i class="fa-solid fa-wind sm:text-2xl text-lg"></i>
         <div>
-          <span class="text-xl font-semibold">${wind}${windUnit}</span>
+          <span class="sm:text-xl text-base font-semibold">${wind}${windUnit}</span>
           <p class="text-sm">Wind Speed</p>
         </div>
       </div>
